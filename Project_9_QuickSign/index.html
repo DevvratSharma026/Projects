@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Signature Website</title>
+    <style>
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .top, .bottom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 20px 0 20px 0;
+        }
+
+        .block, input, select, button{
+            width: 80%;
+        }
+
+        .column{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top>.block{
+            margin: 10px;
+        }
+
+        .bottom>button{
+            margin: 10px;
+        }
+
+        .block>p{
+            margin: 10px auto;
+            width: 50%;
+        }
+
+        .canvas{
+            border: 2px solid black;
+        }
+
+        .btn{
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-danger{
+            background-color: rgb(232, 95, 95);
+            color: white;
+        }
+
+        .btn-success{
+            background-color: rgb(84, 202, 84);
+            color: white;
+        }
+
+        .btn-warning{
+            background-color: rgb(236, 236, 84);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="block">
+                <p>Text color picker</p>
+                <input class="form-control" type="color" id="colorPicker">
+            </div>
+
+            <div class="block">
+                <p>Background</p>
+                <input class="form-control" type="color" id="canvaColor">
+            </div>
+
+            <div class="block">
+                <p>Font Size</p>
+                 <select id="fontSizePicker" type="select" class="custom-select">
+                    <option value="5">5px</option>
+                    <option value="10">10px</option>
+                    <option value="20">20px</option>
+                    <option value="30">30px</option>
+                    <option value="40">40px</option>
+                    <option value="50">50px</option>
+                 </select>
+            </div>
+        </div>
+
+        <canvas id="myCanvas" class="canvas" width="800" height="500"></canvas>
+
+        <div class="bottom">
+            <button type="button" class="btn btn-danger" id="clearButton">Clear</button>
+
+            <button type="button" class="btn btn-success" id="saveButton">Save & Download</button>
+
+            <button type="button" class="btn btn-warning" id="retriveButton">Retrive saved Signature</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

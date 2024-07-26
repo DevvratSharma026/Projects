@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #06111f, #4e085f);
+    padding: 10px;
+}
+
+.guess-box{
+    border: 1px solid red;
+    margin: 100px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.guess-box h1{
+    width: 100%;
+    margin: 23px;
+    font-size: 23px;
+    color: white;
+}
+
+.input-field{
+    flex:1;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: 70%;
+    font-weight: 600;
+}
+
+.guess-btn{
+    padding: 10px;
+    background-color: #e34b29;
+    border-radius: 20px;
+    border: none;
+    outline:none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    margin-right: 17px;
+}
+
+.Guess{
+    color: white;
+    padding: 20px; 
+    width: 100%;
+}
